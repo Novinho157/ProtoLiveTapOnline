@@ -1,0 +1,12 @@
+{
+  "name": "protolive-tap-online",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Protótipo online de teste de espectadores e taps, isolado de plataformas externas.",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "dependencies": {
+    "express": "^4.21.2",
+    "ws": "^8.18.0"
+  }
+}

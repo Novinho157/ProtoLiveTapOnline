@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Protótipo Live Tap</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div>
+    <div class="eyebrow">PROTÓTIPO ONLINE</div>
+    <h1>Live Tap Simulator</h1>
+    <p>Ambiente de teste isolado — não envia eventos para TikTok ou outras plataformas.</p>
+  </div>
+  <div id="status" class="status offline">● desconectado</div>
+</header>
+
+<main>
+  <section class="controls panel">
+    <h2>Configuração</h2>
+    <div class="grid">
+      <label>Espectadores virtuais
+        <input id="count" type="number" min="0" max="5000" value="500">
+      </label>
+      <label>Média de taps/s por pessoa
+        <input id="avg" type="number" min="0" max="100" step="0.1" value="2">
+      </label>
+    </div>
+    <div class="buttons">
+      <button id="apply">Aplicar</button>
+      <button id="start" class="primary">Iniciar</button>
+      <button id="pause">Pausar</button>
+      <button id="reset">Resetar</button>
+    </div>
+  </section>
+
+  <section class="metrics">
+    <div class="metric"><span>Espectadores</span><strong id="spectators">0</strong></div>
+    <div class="metric"><span>Ativos</span><strong id="active">0</strong></div>
+    <div class="metric"><span>Taps totais</span><strong id="total">0</strong></div>
+    <div class="metric"><span>Taps/s</span><strong id="tps">0.0</strong></div>
+    <div class="metric"><span>Tempo</span><strong id="elapsed">00:00</strong></div>
+  </section>
+
+  <section class="panel">
+    <div class="section-head">
+      <h2>Espectadores virtuais</h2>
+      <span>mostrando até 500</span>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>ID</th><th>Status</th><th>Taps/s</th><th>Taps</th></tr></thead>
+        <tbody id="people"></tbody>
+      </table>
+    </div>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
